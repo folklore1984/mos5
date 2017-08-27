@@ -1,0 +1,52 @@
++log BEGIN
+log stamp
+log CYCLE_1
+log stamp
+
+mount
+populate 1
+runscript cycle.1.sh
+
+log stamp
+log CYCLE_2
+log stamp
+
+populate 2
+runscript cycle.2.sh
+
+log stamp
+log CYCLE_3
+log stamp
+
+populate 3
+runscript cycle.3.sh
+
+log stamp
+log Configure+Cleanup+Kernel
+log stamp
+
+runscript initrc.sh
+runscript passwd.sh
+runscript clean.sh
+umount
+kernel
+
+log stamp
+log Tar+Hash
+log stamp
+
+tarit
+hashit
+
++log stamp
++log Extras
++log stamp
++
++mount
++populate 4
++runscript cycle.4.sh
++umount
++kernel
++
++log stamp
++log END

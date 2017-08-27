@@ -1,0 +1,10 @@
+CFLAGS="-O2 -pipe -fno-diagnostics-color"
+CXXFLAGS="${CFLAGS}"
+CHOST="x86_64-gentoo-linux-musl"
+MAKEOPTS="-j17"
+
+PAX_MARKINGS="XT"
+
+PORTAGE_BINHOST="http://bluedragon.freeharbor.net/"
+
+source /var/lib/layman/make.conf

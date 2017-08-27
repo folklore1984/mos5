@@ -1,0 +1,26 @@
+Money Operating System 5 (MOS5)
+===============================
+
+GRS is provided by the `app-portage/grs` package.
+
+On the server, a daemon called grsrun will either do a release run, in which
+case it builds the release tarballs, or it will do an update run where it
+either builds or updates a bunch of extra binpkgs.
+
+ * [GRS](https://wiki.gentoo.org/wiki/Project:RelEng_GRS)
+
+
+
+-----------------------------------------------------+---------------------------------------------------+
+File						     |	Purpose						 |
+-----------------------------------------------------+---------------------------------------------------+
+/var/lib/grs/desktop-amd64-musl-hardened		local GRS git repo
+/var/log/grs/desktop-amd64-musl-hardened.log		logs message from chroot
+/var/log/grs/grs-daemon-<pid>.log			log messages from daemon
+/var/tmp/grs/desktop-amd64-musl-hardened/system		root for this GRS system
+/var/tmp/grs/desktop-amd64-musl-hardened/packages	binpkgs for this GRS system
+/var/tmp/grs/desktop-amd64-musl-hardened/kernel		scratch directory for the kernel work
+/var/tmp/grs/desktop-amd64-musl-hardened/work  		scratch directory for running 'populate'
+/var/tmp/grs/desktop-amd64-musl-hardened/.completed_XX	completed directive at line XX of build script
+/var/tmp/grs/desktop-amd64-musl-hardened/		release tarball and digest are in this directory
+/run/grs-desktop-amd64-musl-hardened.pid		pid file for daemon responsible for this GRS

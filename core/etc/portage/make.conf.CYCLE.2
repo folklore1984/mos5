@@ -1,0 +1,11 @@
+CFLAGS="-O2 -pipe -fno-diagnostics-color"
+CXXFLAGS="${CFLAGS}"
+CHOST="x86_64-gentoo-linux-musl"
+MAKEOPTS="-j17"
+
+PAX_MARKINGS="XT"
+
+USE="-cups -tk -fontforge"
+USE_ORDER="env:conf:pkg:defaults:pkginternal:repo:env.d"
+
+source /var/lib/layman/make.conf
